@@ -1,0 +1,95 @@
+
+<%- include('headmain') %>
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/gallery.css">
+<main class="main" id="main" role="main" style="z-index: 999;">
+
+<!-- <div class="sp">
+  <h1>Sponsors will be released soon....</h1>
+</div> -->
+<section class="gallery">
+    <div id="row1" class="row"> 
+  <div class="column">
+    <img class="myImg" src="/ven/1.jpeg" style="width:100%">
+    <img class="myImg" src="/ven/2.jpeg" style="width:100%">
+    <img class="myImg" src="/ven/3.png" style="width:100%">
+    <img class="myImg" src="/ven/4.png" style="width:100%">
+    <img class="myImg" src="/ven/17.jpeg" style="width:100%">
+    <img class="myImg" src="/ven/18.jpeg" style="width:100%">
+    <img class="myImg" src="/ven/19.jpeg" style="width:100%">
+    <img class="myImg" src="/ven/20.jpeg" style="width:100%">
+   
+  </div>
+  <div class="column">
+    <img class="myImg" src="/ven/5.jpeg" style="width:100%">
+    <img class="myImg" src="/ven/6.jpeg" style="width:100%">
+    <img class="myImg" src="/ven/7.jpeg" style="width:100%">
+    <img class="myImg" src="/ven/8.jpeg" style="width:100%">
+    <img class="myImg" src="/ven/21.png" style="width:100%">
+    <img class="myImg" src="/ven/22.png" style="width:100%">
+    <img class="myImg" src="/ven/24.jpg" style="width:100%">
+    <img class="myImg" src="/ven/25.png" style="width:100%">
+  </div>  
+  <div class="column">
+    <img class="myImg" src="/ven/9.jpeg" style="width:100%">
+    <img class="myImg" src="/ven/10.jpeg" style="width:100%">
+    <img class="myImg" src="/ven/11.jpeg" style="width:100%">
+    <img class="myImg" src="/ven/12.jpeg" style="width:100%">
+    <img class="myImg" src="/ven/26.jpeg" style="width:100%">
+    <img class="myImg" src="/ven/27.jpeg" style="width:100%">
+    <img class="myImg" src="/ven/28.jpeg" style="width:100%">
+    <img class="myImg" src="/ven/29.jpeg" style="width:100%">
+  </div>
+  <div class="column">
+    <img class="myImg" src="/ven/13.jpeg" style="width:100%">
+    <img class="myImg" src="/ven/14.jpeg" style="width:100%">
+    <img class="myImg" src="/ven/15.jpeg" style="width:100%">
+    <img class="myImg" src="/ven/16.jpeg" style="width:100%">
+    <img class="myImg" src="/ven/30.jpeg" style="width:100%">
+    <img class="myImg" src="/ven/31.jpeg" style="width:100%">
+    <img class="myImg" src="/ven/32.jpeg" style="width:100%">
+    <img class="myImg" src="/ven/33.jpeg" style="width:100%">
+  </div>
+</div>
+<div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+  <span id="clo" class="close">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+</div>
+
+
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+  var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = $('.myImg');
+var modalImg = $("#img01");
+$('.myImg').click(function(){
+    modal.style.display = "block";
+    var newSrc = this.src;
+    modalImg.attr('src', newSrc);
+    captionText.innerHTML = this.alt;
+});
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
+<script type="text/javascript">
+    document.getElementById('close').onclick = function(){
+    document.getElementById('myModal').style.display='none';
+    }
+</script>
+
+ </main>
+ <%- include('footmain') %>

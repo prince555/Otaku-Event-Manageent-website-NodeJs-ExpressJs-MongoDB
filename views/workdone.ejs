@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.ckeditor.com/4.9.1/standard/ckeditor.js"></script>
+ 
+</head>
+  <body>
+        <nav class="navbar navbar-default">
+                <div class="container">
+                  <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Otaku</a>
+                  </div>
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li class="dropdown"><a href="/userdashboard">Dashboard </a></li>
+                    <li class="dropdown"><a href="#">Announcements </a></li>
+                      <li class="dropdown"><a href="/workdone">Work done </a></li>
+                        <li><a href="/logout">Logout</a></li>
+                  </ul>
+                  <div class="navbar-header" style="float: right;"> <a class="navbar-brand" href="#">Loggedin As: <% if(loginUser){ %> <%= loginUser  %> <% } %></a></div>
+                </div>
+              </nav>
+
+    <div class="container">
+      <div class="row">
+
+          <div id="signupbox" style="margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+              <div class="panel panel-info">
+                  <div class="panel-heading">
+                      <div class="panel-title"> Enter work done</div>
+                       </div>  
+                  <div class="panel-body" >
+                      <form action="/workdone" id="passwordform" class="form-horizontal" method="post"  role="form">
+                        <% if(success !=''){%> 
+                          <p><%= success %></p>
+                          <%}%>
+                        <div class="form-group">
+                                  <label for="username" class="col-md-3 control-label">University</label>
+                                  <div class="col-md-9">
+                                     <select class="form-control" name="pass_cat">
+                                         <option value="">Choose your university or college</option>
+                                         <% if(records.length > 0){
+                                          records.forEach(function(row){
+                                          %>
+                                         <option value="<%= row.passord_category %>"><%= row.passord_category %></option>
+                                         <%  }) } %>
+                                        </select>
+                                  </div>
+                              </div>
+
+                              <div class="form-group">
+                                <label for="username" class="col-md-3 control-label"> Name</label>
+                                <div class="col-md-9">
+                                    <input type="textbox" class="form-control" name="project_name"  placeholder="Enter Your Name">
+                                </div>
+                            </div>
+                          <div class="form-group">
+                              <label for="username" class="col-md-3 control-label">work done</label>
+                              <div class="col-md-9">
+                                  <textarea class="form-control" id="editor" name="pass_details" rows="5" placeholder="Enter Your work"></textarea>
+                              </div>
+                          </div>
+                         
+                          <div class="form-group">
+                              <!-- Button -->                                        
+                              <div class="col-md-offset-3 col-md-9">
+                              <input type="submit" name="submit" value="Add work done" class="btn btn-primary">   
+                              </div>
+                          </div>
+  
+                      </form>
+                   </div>
+              </div>       
+   </div> 
+      </div>
+    </div>
+      <script>
+        CKEDITOR.replace( 'editor' );
+    </script>
+    <%- include('footer') %>

@@ -1,0 +1,44 @@
+.site-footer [class^="col"]:nth-child(1):after { right: -120px; }
+
+/* ##88 */
+.site-footer .container:before { top: -300px; right: -200px; }
+
+.site-footer .section-title { font-size: 32px; line-height: 32px; }
+.site-footer .contact-address { font-size: 18px; }
+.site-footer .contact-phone { font-size: 26px; }
+.site-footer .social-intro p { font-size: 18px; line-height: 24px; }
+
+/* #70 */
+.site-footer .plane { top: -120px; }
+.site-footer .plane::before { bottom: -120px; }
+
+/* #86 */
+.single-casestudy .section-more-casestudies { z-index: 5; }
+.logo-main{
+    z-index: 111;
+}
+.nav-up {
+margin-top: -100px;
+transition: all 200ms linear;
+}
+
+.loaded main{margin-top:100px;}
+
+main{
+margin-top: 0px;
+
+}
+#main{
+background-size: cover;
+background-repeat: no-repeat;
+background-image: url(download.jfif);
+margin-top: -30px;
+}
+.sp{
+padding: 25%;
+}
+@media (max-width: 600px){
+.sp{
+padding: 20px;
+}
+}

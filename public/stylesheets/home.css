@@ -1,0 +1,38 @@
+/* #87 */
+.page.join-us .section-intro .tag-title { background-color: #0034cf; }
+
+/* #82 - absolutely didn't work */
+/*.section-intro:last-child { background-size: 100% auto; }*/
+
+/* #74 */
+.site-footer [class^="col"]:nth-child(1):after { right: -120px; }
+
+/* #78 */
+.page-template-contact .inner-shape { -webkit-clip-path: polygon(0 0, 84% 40%, 70% 94%, 0% 100%); }
+.no-webanimations .page-template-contact .inner-shape { width: 120%; padding: 110px 150px 70px 80px; }
+
+/* ##88 */
+.site-footer .container:before { top: -300px; right: -200px; }
+
+/* #91 */
+.tag-title { -webkit-clip-path: polygon(0 0, 100% 8%, 100% 80%, 4% 100%); }
+
+/* #3 */
+.site-footer .section-title { font-size: 32px; line-height: 32px; }
+.site-footer .contact-address { font-size: 18px; }
+.site-footer .contact-phone { font-size: 26px; }
+.site-footer .social-intro p { font-size: 18px; line-height: 24px; }
+
+/* #70 */
+.site-footer .plane { top: -120px; }
+.site-footer .plane::before { bottom: -120px; }
+
+/* #86 */
+.single-casestudy .section-more-casestudies { z-index: 5; }
+.logo-main{
+    z-index: 111;
+}
+.nav-up {
+margin-top: -100px;
+transition: all 200ms linear;
+}
